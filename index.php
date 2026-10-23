@@ -1,10 +1,8 @@
 <?php
-require_once "./config/database.php";
+# --- Позволяет использовать абсолютные пути ---
+// define('ROOT_PATH', __DIR__);
+// set_include_path(__DIR__);
+set_include_path(get_include_path() . PATH_SEPARATOR . __DIR__);
 
-$dsn = "mysql:host={$db_host};dbname={$db_name};charset=${charset}";
+require 'config/connect.php';
 
-if $override_db_port != 0 {
-    $dsn .= ";port=${$override_db_port}"
-}
-
-$pdo = new PDO($dsn, $user, $password);
