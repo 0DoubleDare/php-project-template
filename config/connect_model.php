@@ -20,3 +20,4 @@ function add_port(string $dsn, int $port): string {
     }
     return $dsn;
 }
+

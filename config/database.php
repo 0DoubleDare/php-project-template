@@ -1,11 +1,11 @@
 <?php
 # ---- Обязательные настройки ----
-$db_host = "localhost";
-$db_name = "my-database";
-$user = "root";
-$password = "";
+$db_host          = "localhost";
+$db_name          = "my-database-from-scaffolder";
+$user             = "root";
+$password         = "1234";
 
 # ---- Специфичные настройки базы данных ----
-$charset = "utf8mb4";
+$charset          = "utf8mb4";
 $override_db_port = 0;
-$driver = "mysql"; 
+$driver           = "mysql";

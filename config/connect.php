@@ -2,7 +2,7 @@
 require_once 'config/database.php';
 require_once 'config/connect_model.php';
 
-# --- Подключение к самому драйверу базы данных (к самому MySQL) ---
+# --- Подключение к самому драйверу базы данных (к самому MySQL если быть точнее) ---
 $initial_dsn = "{$driver}:host={$db_host};charset={$charset}";
 $initial_dsn = add_port($initial_dsn, $override_db_port);
 
