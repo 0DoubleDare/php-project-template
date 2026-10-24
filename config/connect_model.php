@@ -21,3 +21,6 @@ function add_port(string $dsn, int $port): string {
     return $dsn;
 }
 
+function check_any_table_is_exist(PDO $pdo): bool {
+    
+}

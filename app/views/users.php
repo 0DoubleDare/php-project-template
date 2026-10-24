@@ -8,7 +8,7 @@
 <body>
     <h1 class="header-frist">Добро пожаловать в шаблон :)))</h1>
     <?php foreach ($users as $user): ?>
-        <p>Здарова <?= htmlspecialchars($user) ?></p>
+        <p>Здарова <?= htmlspecialchars($user['name']) ?></p>
     <?php endforeach; ?>
 
 </body>

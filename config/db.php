@@ -1,5 +1,5 @@
 <?php
-require_once 'config/database.php';
+require_once 'config/db_config.php';
 require_once 'config/connect_model.php';
 
 # --- Подключение к самому драйверу базы данных (к самому MySQL если быть точнее) ---
@@ -17,10 +17,10 @@ if (!$database_is_exist) {
 $dsn = "{$driver}:host={$db_host};dbname={$db_name};charset={$charset}";
 $dsn = add_port($dsn, $override_db_port);
 
-// try {
+try {
     $pdo = new PDO($dsn, $user, $password, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     ]);
-// } catch (PDOException $e) {
-    // "Не удалось подключиться к базе данных. Текст ошибки: \n {$e}";
-// }
+} catch (PDOException $e) {
+    die("Не удалось подключиться к базе данных. Текст ошибки: \n {$e}");
+}
